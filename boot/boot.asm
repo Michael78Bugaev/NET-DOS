@@ -6,7 +6,7 @@ bits 32
 start:
     ; Set up stack
     mov esp, stack_top
-
+    sti
     ; Call the kernel main function
     call kernel_main
 
