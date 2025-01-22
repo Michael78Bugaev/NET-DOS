@@ -38,13 +38,13 @@ $(OS_IMAGE): $(OBJ_C) $(OBJ_ASM)
 # Компиляция .c файлов
 $(C_BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(dir $@)
-	@echo $^ " -> " $@
+	@echo "CC	" $^
 	@$(CC) $(CFLAGS) -o $@ $<
 
 # Компиляция .asm файлов
 $(ASM_BUILD_DIR)/%.o: $(SRC_DIR)/%.asm
 	@mkdir -p $(dir $@)
-	@echo $^ " -> " $@
+	@echo "AS	" $^
 	$(ASM) $(ASMFLAGS) -o $@ $<
 
 # Очистка
